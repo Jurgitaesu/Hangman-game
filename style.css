@@ -1,43 +1,59 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     width: 100%;
     height: 97vh;
     background-color: #dedae9;
 }
 
-h2{
+h2 {
     font-size: 30px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.container{
+.container {
     width: 80%;
     margin: auto;
     display: none;
+    height: 500px;
 }
 
-button{
+.button {
     font-size: 20px;
     padding: 10px;
-    margin: auto;
+    margin: 20px auto;
     display: block;
     border-radius: 10px;
-    background-color: mediumpurple;
+    background-color: #bdabe9;
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
 }
 
-#message{
+#livesInfo {
     text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.letter-buttons {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: mediumpurple;
+    cursor: pointer;
+
+}
+
+#word{
+    text-align: center;
 }
 
 
