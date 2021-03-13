@@ -52,9 +52,17 @@ button:hover {
 
 }
 
-#word{
+#word {
     text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
 }
 
+#picture {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+}
 
 
