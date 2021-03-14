@@ -4,6 +4,7 @@ const keyboardContainer = document.getElementById('keyboardContainer')
 const mistakesHtml = document.getElementById('mistakesHtml')
 const livesLeftHtml = document.getElementById('livesLeftHtml')
 const word = document.getElementById('word')
+
 startButton.addEventListener('click', startGame)
 
 const words = [
@@ -23,15 +24,13 @@ let wordStatus = null
 
 function startGame() {
     word.innerHTML = ''
-    mistakesHtml.innerText = 0
-    mistakes = 0
     startButton.innerText = 'Restart game'
     container.style.display = 'block'
     randomWord()
     generateButtons()
     livesLeftHtml.innerText = livesLeft
     guessedWord()
-
+    startButton.addEventListener('click', reset)
 }
 
 function randomWord() {
@@ -49,8 +48,6 @@ function generateButtons() {
     separateLetters.map(letter => {
         document.getElementById(letter).addEventListener('click', selectLetter)
     })
-
-
 }
 
 
@@ -72,6 +69,10 @@ function selectLetter(e) {
         }
     } else if (answer.indexOf(chosenLetterId) === -1) {
         mistakes++
+        for (let i = 0; i < mistakes; i++) {
+            document.getElementsByClassName('mistake')[i].style.display = 'block'
+        }
+
         mistake()
         if (livesLeft === mistakes) {
             keyboardContainer.innerHTML = 'Oh my! You lost!'
@@ -84,7 +85,6 @@ function selectLetter(e) {
 }
 
 function guessedWord() {
-
     wordStatus = answer.split('').map(letter =>
         guesses.indexOf(letter) >= 0 ? letter : " _ ").join('')
     word.innerHTML = wordStatus
@@ -92,6 +92,17 @@ function guessedWord() {
 
 function mistake() {
     mistakesHtml.innerText = mistakes
+}
+
+function reset() {
+    wordStatus = null
+    mistakesHtml.innerText = 0
+    mistakes = 0
+    guesses = []
+    for (let i = 0; i < livesLeft; i++) {
+        document.getElementsByClassName('mistake')[i].style.display = 'none'
+    }
+    startGame()
 }
 
 

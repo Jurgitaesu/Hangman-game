@@ -63,6 +63,94 @@ button:hover {
     height: 400px;
     background-color: white;
     margin: auto;
+    position: relative;
+}
+
+.hangman-1 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    height: 300px;
+    border-left: 5px solid black;
+    display: none;
+}
+
+.hangman-2 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border-bottom: 5px solid black;
+    width: 150px;
+    display: none;
+}
+
+.hangman-3 {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    height: 30px;
+    border-left: 5px solid black;
+    display: none;
+}
+
+.hangman-4 {
+    position: absolute;
+    left: 172px;
+    top: 80px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    display: none;
+}
+
+.hangman-5 {
+    position: absolute;
+    left: 200px;
+    top: 140px;
+    height: 100px;
+    border-left: 5px solid black;
+    display: none;
+}
+
+.hangman-6 {
+    position: absolute;
+    left: 184px;
+    top: 170px;
+    height: 50px;
+    border-left: 5px solid black;
+    -webkit-transform: translateY(-20px) translateX(5px) rotate(27deg);
+    display: none;
+}
+
+.hangman-7 {
+    position: absolute;
+    left: 183px;
+    top: 170px;
+    height: 50px;
+    border-left: 5px solid black;
+    -webkit-transform: translateY(-20px) translateX(28px) rotate(155deg);
+    display: none;
+}
+
+.hangman-8 {
+    position: absolute;
+    left: 184px;
+    top: 257px;
+    height: 50px;
+    border-left: 5px solid black;
+    -webkit-transform: translateY(-20px) translateX(5px) rotate(27deg);
+    display: none;
+}
+
+.hangman-9 {
+    position: absolute;
+    left: 183px;
+    top: 257px;
+    height: 50px;
+    border-left: 5px solid black;
+    -webkit-transform: translateY(-20px) translateX(28px) rotate(155deg);
+    display: none;
 }
 
 
